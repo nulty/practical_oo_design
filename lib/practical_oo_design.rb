@@ -7,15 +7,14 @@ module PracticalOoDesign
 
   method = <<-BIKE.chomp
 bike = Bicycle.new(
-        size: 'M',
-        tape_color: 'red' )
+        style: :mountain,
+        size: 'S',
+        front_shock: 'Manitou',
+        rear_shock: 'Fox' )
 # -> 
 BIKE
   print method
-  puts bike = Bicycle.new(size: 'M', tape_color: 'red' )
-
-  print "bike.size\n -> "
-  puts bike.size
+  puts bike = Bicycle.new(style: :mountain, size: 'S', front_shock: 'Manitou', rear_shock: 'Fox')
 
   print "bike.spares\n -> "
   puts bike.spares
