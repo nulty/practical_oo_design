@@ -1,4 +1,3 @@
-require 'pry'
 require_relative "practical_oo_design/version"
 require_relative "practical_oo_design/gear"
 require_relative "practical_oo_design/wheel"
@@ -6,6 +5,7 @@ require_relative "practical_oo_design/bicycle"
 require_relative "practical_oo_design/mountain_bike"
 require_relative "practical_oo_design/road_bike"
 require_relative "practical_oo_design/recumbent_bike"
+require_relative "practical_oo_design/schedule"
 
 module PracticalOoDesign
 
@@ -49,7 +49,6 @@ module PracticalOoDesign
   # print "recumbent_bike = RecumbentBike.new\n# -> "
   # puts recumbent_bike = RecumbentBike.new(flag: "tall and orange")
 
-  binding.pry
   print "bent = RecumbentBike.new\n# -> "
   puts bent = RecumbentBike.new(flag: "tall and orange")
 
