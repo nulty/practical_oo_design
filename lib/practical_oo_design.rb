@@ -31,4 +31,7 @@ BIKE
 
   print "mountain_bike.size\n# -> "
   puts mountain_bike.size
+
+  # print "mountain_bike.spares\n# -> "
+  # puts mountain_bike.spares
 end
