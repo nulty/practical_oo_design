@@ -45,7 +45,13 @@ module PracticalOoDesign
   # print "mountain_bike.chain\n# -> "
   # puts mountain_bike.chain
 
-  print "recumbent_bike = RecumbentBike.new\n# -> "
-  puts recumbent_bike = RecumbentBike.new
+  # print "recumbent_bike = RecumbentBike.new\n# -> "
+  # puts recumbent_bike = RecumbentBike.new(flag: "tall and orange")
+
+  print "bent = RecumbentBike.new\n# -> "
+  puts bent = RecumbentBike.new(flag: "tall and orange")
+
+  print "bent.spares\n# -> "
+  puts bent.spares
 
 end
