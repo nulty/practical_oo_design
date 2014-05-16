@@ -5,6 +5,8 @@ class Bicycle
     @size      = args[:size]
     @chain     = args[:chain]     || default_chain
     @tire_size = args[:tire_size] || default_tire_size
+
+    post_initialize(args)   # Bicycle both sends
   end
 
   def default_chain
@@ -16,7 +18,16 @@ class Bicycle
   end
 
   def spares
+    binding.pry
     { tire_size: tire_size,
-      chain:     chain}
+      chain:     chain}.merge(local_spares)
+  end
+
+  def post_initialization(args)  # and implements this
+    nil
+  end
+
+  def local_spares
+    {}
   end
 end

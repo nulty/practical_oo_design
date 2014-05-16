@@ -1,18 +1,19 @@
 class RecumbentBike < Bicycle
   attr_reader :flag
 
-  def initialize(args)
-    @flag = args[:flag] # forgot to send super
+  def post_initialize(args)
+    @flag = args[:flag]
   end
 
-  def spares
-    super.merge(flag: flag)
+  def local_spares
+    {flag: flag}
   end
+
   def default_chain
     '9-speed'
   end
 
-  def default_chaintire_size
+  def default_tire_size
     '28'
   end
 end
