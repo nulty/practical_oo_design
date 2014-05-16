@@ -10,4 +10,8 @@ class Bicycle
   def default_chain
     '10-speed'
   end
+
+  def default_tire_size
+    raise NotImplementedError, "is not implemented in #{self.class}"
+  end
 end
