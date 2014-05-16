@@ -16,8 +16,14 @@ BIKE
   print method
   puts road_bike = RoadBike.new(size: 'M', tape_color: 'red')
 
-  print "road_bike.size\n# -> "
-  puts road_bike.size
+  # print "road_bike.size\n# -> "
+  # puts road_bike.size
+
+  print "road_bike.tire_size\n# -> "
+  puts road_bike.tire_size
+
+  print "road_bike.chain\n# -> "
+  puts road_bike.chain
 
   method = <<-BIKE.chomp
 mountain_bike = MountainBike.new(
@@ -29,9 +35,12 @@ BIKE
   print method
   puts mountain_bike = MountainBike.new(size: 'S', front_shock: 'Manitou', rear_shock: 'Fox')
 
-  print "mountain_bike.size\n# -> "
-  puts mountain_bike.size
+  # print "mountain_bike.size\n# -> "
+  # puts mountain_bike.size
 
-  # print "mountain_bike.spares\n# -> "
-  # puts mountain_bike.spares
+  print "mountain_bike.tire_size\n# -> "
+  puts mountain_bike.tire_size
+
+  print "mountain_bike.chain\n# -> "
+  puts mountain_bike.chain
 end
