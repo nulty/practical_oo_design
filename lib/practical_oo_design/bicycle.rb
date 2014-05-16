@@ -3,22 +3,18 @@ class Bicycle
               :front_shock, :rear_shock
 
   def initialize(args)
-    @type = args[:style]
-    @size = args[:size]
-    @tape_color = args[:tape_color]
+    @type        = args[:style]
+    @size        = args[:size]
+    @tape_color  = args[:tape_color]
     @front_shock = args[:front_shock]
-    @rear_shock = args[:rear_shock]
+    @rear_shock  = args[:rear_shock]
   end
 
   def spares
-    if style == :road
-      { chain: '10-speed',
-        tire_size: '23',
-        tape_color: tape_color }
-    else
-      { chain: '10-speed',
-        tire_size: '2.1',
-        rear_shock: rear_shock }
-    end
+    { chain:       '10-speed',
+      tire_size:   '23',
+      tape_color:  tape_color,
+      front_shock: front_shock,
+      rear_shock:  rear_shock }
   end
 end
