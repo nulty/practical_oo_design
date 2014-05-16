@@ -14,4 +14,9 @@ class Bicycle
   def default_tire_size
     raise NotImplementedError, "is not implemented in #{self.class}"
   end
+
+  def spares
+    { tire_size: tire_size,
+      chain:     chain}
+  end
 end
