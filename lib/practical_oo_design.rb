@@ -1,3 +1,5 @@
+require 'date'
+
 require_relative "practical_oo_design/version"
 require_relative "practical_oo_design/gear"
 require_relative "practical_oo_design/wheel"
@@ -49,10 +51,9 @@ module PracticalOoDesign
   # print "recumbent_bike = RecumbentBike.new\n# -> "
   # puts recumbent_bike = RecumbentBike.new(flag: "tall and orange")
 
-  print "bent = RecumbentBike.new\n# -> "
-  puts bent = RecumbentBike.new(flag: "tall and orange")
+  starting = Date.parse("2015/09/04")
+  ending   = Date.parse("2015/09/10")
 
-  print "bent.spares\n# -> "
-  puts bent.spares
-
+  b = Bicycle.new
+  b.scheduled?(starting,ending)
 end
