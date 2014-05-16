@@ -7,7 +7,7 @@ Project divides the book into commits by code example and tag by chapter
 
 Add this line to your application's Gemfile:
 
-    gem 'practical-oo-design'
+    gem 'practical_oo_design'
 
 And then execute:
 
@@ -15,17 +15,17 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install practical-oo-design
+    $ gem install practical_oo_design
 
 ## Usage
 
-Just browse through the code for now.
+    ruby lib/practical_oo_design
 
 ## Contributing
 
 Probably no need for this
 
-1. Fork it ( https://github.com/[my-github-username]/practical-oo-design/fork )
+1. Fork it ( https://github.com/[my-github-username]/practical_oo_design/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
