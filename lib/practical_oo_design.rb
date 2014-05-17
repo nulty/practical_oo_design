@@ -7,6 +7,7 @@ require_relative "practical_oo_design/bicycle"
 require_relative "practical_oo_design/mountain_bike"
 require_relative "practical_oo_design/road_bike"
 require_relative "practical_oo_design/recumbent_bike"
+require_relative "practical_oo_design/schedulable"
 require_relative "practical_oo_design/schedule"
 
 module PracticalOoDesign
@@ -55,5 +56,5 @@ module PracticalOoDesign
   ending   = Date.parse("2015/09/10")
 
   b = Bicycle.new
-  b.scheduled?(starting,ending)
+  b.schedulable?(starting,ending)
 end
