@@ -151,4 +151,19 @@ PART
 print method
 
 puts mountain_bike.spares
+
+
+  method = <<-PART.chomp
+mountain_bike.parts.size\n# -> 
+PART
+print method
+
+puts mountain_bike.parts.size
+
+  method = <<-PART.chomp
+mountain_bike.spares.size\n# -> 
+PART
+print method
+
+puts mountain_bike.spares.size
 end
