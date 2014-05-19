@@ -16,154 +16,49 @@ require_relative "practical_oo_design/part"
 require_relative "practical_oo_design/mechanic"
 require_relative "practical_oo_design/road_bike_parts"
 require_relative "practical_oo_design/mountain_bike_parts"
+require_relative "practical_oo_design/parts_factory"
 
 module PracticalOoDesign
 
   puts
   method = <<-PART.chomp
-chain =
-  Part.new(name: 'chain', description: '10-speed')\n# -> 
+road_config =
+  [['chain',      '10-speed'],
+   ['tire_size',  '23'],
+   ['tape_color', 'red']]\n# -> 
   PART
 print method
 
-puts chain =
-  Part.new(name: 'chain', description: '10-speed')
+print road_config = [['chain', '10-speed'], ['tire_size', '23'], ['tape_color', 'red']]
 
-  method = <<-PART.chomp
-road_tire =
-  Part.new(name: 'road_tire', description: '23')\n# -> 
-  PART
+  print "\n\n"
+  method = <<-PARTS.chomp
+mountain_config =
+  [['chain',       '10-speed'],
+   ['tire_size',   '2.1'],
+   ['front_shock', 'Manitou', false],
+   ['rear_shock',  'Fox']]\n# -> 
+  PARTS
 print method
 
-puts road_tire =
-  Part.new(name: 'road_tire', description: '23')
+print mountain_config = [['chain', '10-speed'], ['tire_size', '2.1'], ['front_shock', 'Manitou', false], ['rear_shock', 'Fox']]
 
-  method = <<-PART.chomp
-tape =
-  Part.new(name: 'tape', description: 'red')\n# -> 
-  PART
-  print method
+  print "\n\n"
 
-puts tape =
-  Part.new(name: 'tape', description: 'red')
-
-  method = <<-PART.chomp
-mountain_tire =
-  Part.new(name: 'mountain_tire', description: '2.1')\n# -> 
-  PART
+  method = <<-PARTS.chomp
+road_parts =  PartsFactory.build(road_config)\n# -> 
+  PARTS
 print method
 
-puts mountain_tire =
-  Part.new(name: 'mountain_tire', description: '2.1')
+puts road_parts = PartsFactory.build(road_config).inspect
 
-  method = <<-PART.chomp
-rear_shock =
-  Part.new(name: 'rear_shock', description: 'Fox')\n# -> 
-  PART
+  puts
+  method = <<-PARTS.chomp
+mountain_parts =  PartsFactory.build(mountain_config)\n# -> 
+  PARTS
 print method
 
-puts rear_shock =
-  Part.new(name: 'rear_shock', description: 'Fox')
-
-  method = <<-PART.chomp
-front_shock =
-  Part.new(
-    name: 'front_shock',
-    description: 'Manitou',
-    needs_spare: false)\n# -> 
-  PART
-  print method
-
-puts front_shock =
-  Part.new(
-    name: 'front_shock',
-    description: 'Manitou',
-    needs_spare: false)
+  print mountain_parts = PartsFactory.build(mountain_config).inspect
 
 
-  method = <<-PART.chomp
-road_bike_parts =
-  Parts.new([chain, road_tire, tape])\n# -> 
-  PART
-  print method
-
-puts road_bike_parts =
-  Parts.new([chain, road_tire, tape])
-
-  method = <<-PART.chomp
-road_bike =
-  Bicycle.new(
-    size: 'L',
-    parts: Parts.new([chain,
-                      road_tire,
-                      tape]))\n# -> 
-  PART
-
-puts road_bike =
-  Bicycle.new(
-    size: 'L',
-    parts: Parts.new([chain,
-                      road_tire,
-                      tape]))
-
-  method = <<-PART.chomp
-road_bike.size\n# -> 
-PART
-print method
-
-puts road_bike.size
-
-  method = <<-PART.chomp
-road_bike.spares\n# -> 
-PART
-print method
-
-puts road_bike.spares
-
-  method = <<-PART.chomp
-mountain_bike =
-  Bicycle.new(
-    size: 'L',
-    parts: Parts.new([chain,
-                      mountain_tire,
-                      front_shock,
-                      rear_shock]))\n# -> 
-PART
-
-puts mountain_bike =
-  Bicycle.new(
-    size: 'L',
-    parts: Parts.new([chain,
-                      mountain_tire,
-                      front_shock,
-                      rear_shock]))
-
-  method = <<-PART.chomp
-mountain_bike.size\n# -> 
-PART
-print method
-
-puts mountain_bike.size
-
-  method = <<-PART.chomp
-mountain_bike.spares\n# -> 
-PART
-print method
-
-puts mountain_bike.spares
-
-
-  method = <<-PART.chomp
-mountain_bike.parts.size\n# -> 
-PART
-print method
-
-puts mountain_bike.parts.size
-
-  method = <<-PART.chomp
-mountain_bike.spares.size\n# -> 
-PART
-print method
-
-puts mountain_bike.spares.size
 end
