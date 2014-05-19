@@ -1,3 +1,4 @@
+require 'pry'
 require 'date'
 
 require_relative "practical_oo_design/version"
@@ -49,7 +50,7 @@ road_parts =  PartsFactory.build(road_config)\n# ->
   PARTS
 print method
 
-puts road_parts = PartsFactory.build(road_config).inspect
+ pp road_parts = PartsFactory.build(road_config)
 
   puts
   method = <<-PARTS.chomp
@@ -57,7 +58,40 @@ mountain_parts =  PartsFactory.build(mountain_config)\n# ->
   PARTS
 print method
 
-  print mountain_parts = PartsFactory.build(mountain_config).inspect
+  pp mountain_parts = PartsFactory.build(mountain_config)
+
+  print "\n\n"
+
+  method = <<-PART.chomp
+recumbent_config =
+  [['chain',      '9-speed'],
+   ['tire_size',  '28'],
+   ['flag',       'tall and orange']]\n# -> 
+  PART
+print method
+
+print recumbent_config = [['chain', '9-speed'], ['tire_size', '28'], ['flag', 'tall and orange']]
+
+  print "\n\n"
+
+  puts
+  method = <<-PARTS.chomp
+recumbent_parts =  PartsFactory.build(recumbent_config)\n# -> 
+  PARTS
+print method
 
 
+  pp recumbent_parts =  PartsFactory.build(recumbent_config)
+
+print "\n\n"
+  puts
+  method = <<-PARTS.chomp
+recumbent_bike =
+  Bicycle.new(
+    size: 'L',
+    parts: PartsFactory.build(recumbent_config))\n# -> \n
+  PARTS
+print method
+
+  pp Bicycle.new(size: 'L', parts: PartsFactory.build(recumbent_config))
 end
